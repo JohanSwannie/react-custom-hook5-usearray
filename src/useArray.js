@@ -8,11 +8,7 @@ const useArray = (defaultValue) => {
   };
 
   const update = (idx, item) => {
-    setArray([
-      ...array.slice(0, idx),
-      item,
-      ...array.slice(idx + 1, array.length - 1),
-    ]);
+    setArray([...array.slice(0, idx), item, ...array.slice(idx + 1)]);
   };
 
   const filter = (callback) => {
@@ -20,17 +16,22 @@ const useArray = (defaultValue) => {
   };
 
   const remove = (idx) => {
-    setArray([
-      ...array.slice(0, idx),
-      ...array.slice(idx + 1, array.length - 1),
-    ]);
+    setArray([...array.slice(0, idx), ...array.slice(idx + 1)]);
   };
 
   const clear = () => {
     setArray([]);
   };
 
-  return { array, set: setArray, push, update, filter, remove, clear };
+  return {
+    array,
+    set: setArray,
+    push,
+    update,
+    filter,
+    remove,
+    clear,
+  };
 };
 
 export default useArray;
