@@ -10,3 +10,20 @@
 body {
   background-color: antiquewhite;
 }
+
+h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  color: #FFF;
+  background-color: blue;
+  font-size: 17px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30vw;
+  padding: .7rem;
+  margin: 0 auto 1rem;
+}
