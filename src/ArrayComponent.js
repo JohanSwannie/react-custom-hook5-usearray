@@ -20,7 +20,9 @@ const ArrayComponent = () => {
   return (
     <>
       <h3>ARRAY &#8594; {array.join(", ")}</h3>
-      <button onClick={() => push("Saxophone")}>Add Saxophone to array</button>
+      <button onClick={() => push("Saxophone")}>
+        Add Saxophone to the array
+      </button>
       <button onClick={() => remove(3)}>
         Remove the Fourth element from the array
       </button>
