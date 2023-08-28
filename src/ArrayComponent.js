@@ -19,12 +19,14 @@ const ArrayComponent = () => {
 
   return (
     <>
-      <h3>ARRAY => {array.join(", ")}</h3>
+      <h3>ARRAY &#8594; {array.join(", ")}</h3>
       <button onClick={() => push("Saxophone")}>Add Saxophone to array</button>
       <button onClick={() => remove(3)}>
         Remove the Fourth element from the array
       </button>
-      <button onClick={() => update(2, "Bugle")}>Change Cornet to Bugle</button>
+      <button onClick={() => update(2, "Bugle")}>
+        Change 3rd item to Bugle
+      </button>
       <button onClick={() => filter((item) => item.length < 7)}>
         Keep instruments with shorter names
       </button>
