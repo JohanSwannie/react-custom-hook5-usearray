@@ -8,7 +8,8 @@ const useArray = (defaultValue) => {
   };
 
   const update = (idx, item) => {
-    setArray([...array.slice(0, idx), item, ...array.slice(idx + 1)]);
+    array.splice(idx, 1, item);
+    setArray([...array]);
   };
 
   const filter = (callback) => {
