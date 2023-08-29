@@ -10,6 +10,8 @@ const useArray = (defaultValue) => {
   const update = (idx, item) => {
     array.splice(idx, 1, item);
     setArray([...array]);
+    // OR
+    // setArray([...array.slice(0, idx), item, ...array.slice(idx + 1)]);
   };
 
   const filter = (callback) => {
@@ -17,7 +19,10 @@ const useArray = (defaultValue) => {
   };
 
   const remove = (idx) => {
-    setArray([...array.slice(0, idx), ...array.slice(idx + 1)]);
+    array.splice(idx, 1);
+    setArray([...array]);
+    // OR
+    // setArray([...array.slice(0, idx), ...array.slice(idx + 1)]);
   };
 
   const clear = () => {
